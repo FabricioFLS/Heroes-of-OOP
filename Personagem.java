@@ -3,6 +3,7 @@ public class Personagem {
     private int defesa;
     private int vida;
     private String nomePersonagem;
+    private Arma armaPersonagem;
     
     public int getAtaque() {
         return ataque;
@@ -28,4 +29,14 @@ public class Personagem {
     public void setNomePersonagem(String nomePersonagem) {
         this.nomePersonagem = nomePersonagem;
     }
+    public void name() {
+        
+    }
+    public Arma getArmaPersonagem() {
+        return armaPersonagem;
+    }
+    public void setArmaPersonagem(Arma armaPersonagem) {
+        this.armaPersonagem = armaPersonagem;
+    }
+
 }
