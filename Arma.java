@@ -2,7 +2,12 @@ public class Arma {
     private String nomeArma;
     private int ataque;
     private int defesa;
-    
+
+    public Arma(){
+
+    }
+
+
     public String getNomeArma() {
         return nomeArma;
     }
