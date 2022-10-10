@@ -26,9 +26,12 @@ public class Main {
                                         System.out.println("Escolha um nome para seu personagem");
                                         String nomePersonagem = sc.nextLine();
                                         Arqueiro arqueiro = new Arqueiro();
+                                        arqueiro.setNomePersonagem(nomePersonagem);
                                         System.out.println("Escolha sua arma, Balestra ou ArcoLongo ");
                                         String armaPersonagem = sc.nextLine();
 
+
+                                        System.out.println(arqueiro);
                                 }
                         }
 
