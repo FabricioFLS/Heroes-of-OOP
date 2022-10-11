@@ -11,6 +11,12 @@ public class Main {
                 char rf1 = sc.next().charAt(0);
                 sc.nextLine();
 
+                Personagem[] personagem = new Personagem[3];
+                personagem[0] = new Guerreiro();
+                personagem[1] = new Arqueiro();
+                personagem[2] = new Mago();
+
+
                 if (rf1 == 'i'){
                         System.out.println("Digite c para criar um novo personagem, i para começar a partida ou s para sair do jogo");
                         char rf2 = sc.next().charAt(0);
@@ -25,17 +31,15 @@ public class Main {
                                 if (rf21 == 'a'){
                                         System.out.println("Escolha um nome para seu personagem");
                                         String nomePersonagem = sc.nextLine();
-                                        Arqueiro arqueiro = new Arqueiro();
-                                        arqueiro.setNomePersonagem(nomePersonagem);
+                                        personagem[1].setNomePersonagem(nomePersonagem);
                                         System.out.println("Escolha sua arma, Balestra ou ArcoLongo ");
                                         String armaPersonagem = sc.nextLine();
+                                        personagem[1].setNomeArma(armaPersonagem);
 
 
-                                        System.out.println(arqueiro);
                                 }
                         }
-
-
+                        System.out.println(personagem[1].getNomePersonagem() + personagem[1].getNomeArma());
                 }
 
 
