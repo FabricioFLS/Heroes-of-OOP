@@ -37,6 +37,8 @@ public class Personagem {
     }
     public void setArmaPersonagem(Arma armaPersonagem) {
         this.armaPersonagem = armaPersonagem;
+        ataque += armaPersonagem.getAtaque();
+        defesa += armaPersonagem.getDefesa();
     }
 
 }
