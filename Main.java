@@ -5,8 +5,7 @@ public class Main {
         public static void main(String[] args){
 
                 Scanner sc = new Scanner(System.in);
-
-
+                
                 System.out.println("i para iniciar uma nova partida s para sair");
                 char rf1 = sc.next().charAt(0);
                 sc.nextLine();
