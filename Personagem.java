@@ -40,5 +40,11 @@ public class Personagem {
         ataque += armaPersonagem.getAtaque();
         defesa += armaPersonagem.getDefesa();
     }
+    public double dano;
+    public double receberAtaque(int ataque){
+        return vida -= (ataque - defesa);
+    }
+
+
 
 }
