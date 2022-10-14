@@ -1,4 +1,8 @@
+import java.util.Scanner;
+
 public class Personagem {
+    Scanner sc = new Scanner(System.in);                
+    
     private int ataque;
     private int defesa;
     private int vida;
@@ -27,11 +31,11 @@ public class Personagem {
         return nomePersonagem;
     }
     public void setNomePersonagem(String nomePersonagem) {
-        this.nomePersonagem = nomePersonagem;
+        System.out.println("Digite o nome do seu personagem");
+        nomePersonagem = sc.toString();
+        this.nomePersonagem = nomePersonagem;        
     }
-    public void name() {
-        
-    }
+    
     public Arma getArmaPersonagem() {
         return armaPersonagem;
     }
@@ -40,5 +44,17 @@ public class Personagem {
         ataque += armaPersonagem.getAtaque();
         defesa += armaPersonagem.getDefesa();
     }
+    @Override
+    public boolean equals(Object obj) {
+        // TODO Auto-generated method stub
+        return super.equals(obj);
+    }
+    @Override
+    public String toString() {
+        // TODO Auto-generated method stub
+        return super.toString();
+    }
+
+    
 
 }
