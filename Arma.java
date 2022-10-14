@@ -1,10 +1,9 @@
-public class Arma {
+public class Arma extends Personagem {
     private String nomeArma;
     private int ataque;
     private int defesa;
 
     public Arma(){
-
     }
 
 
@@ -26,5 +25,7 @@ public class Arma {
     public void setDefesa(int defesa) {
         this.defesa = defesa;
     }
+
+
     
 }
