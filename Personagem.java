@@ -44,6 +44,7 @@ public class Personagem {
         ataque += armaPersonagem.getAtaque();
         defesa += armaPersonagem.getDefesa();
     }
+
     @Override
     public boolean equals(Object obj) {
         // TODO Auto-generated method stub
@@ -54,7 +55,10 @@ public class Personagem {
         // TODO Auto-generated method stub
         return super.toString();
     }
-
     
+    public double dano;
+    public double receberAtaque(int ataque){
+        return vida -= (ataque - defesa);
+    }
 
 }
