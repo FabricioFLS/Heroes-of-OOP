@@ -1,64 +1,77 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Personagem {
-    Scanner sc = new Scanner(System.in);                
-    
     private int ataque;
-    private int defesa;
+    private double defesa;
     private int vida;
     private String nomePersonagem;
     private Arma armaPersonagem;
-    
-    public int getAtaque() {
-        return ataque;
+
+
+    public Personagem() {
     }
+
+    public int getAtaque() {
+        return this.ataque;
+    }
+
     public void setAtaque(int ataque) {
         this.ataque = ataque;
     }
-    public int getDefesa() {
-        return defesa;
+
+    public double getDefesa() {
+        return this.defesa;
     }
+
     public void setDefesa(int defesa) {
         this.defesa = defesa;
     }
+
     public int getVida() {
-        return vida;
+        return this.vida;
     }
+
     public void setVida(int vida) {
         this.vida = vida;
     }
+
     public String getNomePersonagem() {
-        return nomePersonagem;
-    }
-    public void setNomePersonagem(String nomePersonagem) {
-        System.out.println("Digite o nome do seu personagem");
-        nomePersonagem = sc.toString();
-        this.nomePersonagem = nomePersonagem;        
-    }
-    
-    public Arma getArmaPersonagem() {
-        return armaPersonagem;
-    }
-    public void setArmaPersonagem(Arma armaPersonagem) {
-        this.armaPersonagem = armaPersonagem;
-        ataque += armaPersonagem.getAtaque();
-        defesa += armaPersonagem.getDefesa();
+        return this.nomePersonagem;
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        // TODO Auto-generated method stub
-        return super.equals(obj);
+    public void setNomePersonagem(String nomePersonagem) {
+        this.nomePersonagem = nomePersonagem;
     }
-    @Override
+
+    public void name() {
+    }
+
+    public Arma getArmaPersonagem() {
+        return this.armaPersonagem;
+    }
+
+    public void setArmaPersonagem(Arma armaPersonagem) {
+        this.armaPersonagem = armaPersonagem;
+        this.ataque += armaPersonagem.getAtaque();
+        this.defesa += armaPersonagem.getDefesa();
+    }
+
+    public double receberAtaque(int ataque) {
+        if (ataque > defesa)
+            vida -= (ataque - defesa);
+        return vida;
+    }
+
+    public double defender() {
+        return defesa += defesa * 0.10;
+    }
+
+
     public String toString() {
-        // TODO Auto-generated method stub
-        return super.toString();
-    }
-    
-    public double dano;
-    public double receberAtaque(int ataque){
-        return vida -= (ataque - defesa);
+        return
+                nomePersonagem;
     }
 
 }
+
