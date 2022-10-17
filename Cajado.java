@@ -1,4 +1,4 @@
-public class Cajado extends Arma {
+public class Cajado extends ArmaMago {
 
     public Cajado() {
         super();

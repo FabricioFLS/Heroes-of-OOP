@@ -1,4 +1,4 @@
-public class Balestra extends Arma {
+public class Balestra extends ArmaArqueiro {
 
     public Balestra() {
         super();

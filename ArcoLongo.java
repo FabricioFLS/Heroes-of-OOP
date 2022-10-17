@@ -1,4 +1,4 @@
-public class ArcoLongo extends Arma {
+public class ArcoLongo extends ArmaArqueiro {
 
     public ArcoLongo() {
         super();

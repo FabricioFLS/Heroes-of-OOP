@@ -1,7 +1,7 @@
-public class Arma extends Personagem {
+public class Arma {
     private String nomeArma;
-    private int ataque;
-    private int defesa;
+    private double ataque;
+    private double defesa;    
 
     public Arma(){
     }
@@ -13,16 +13,16 @@ public class Arma extends Personagem {
     public void setNomeArma(String nomeArma) {
         this.nomeArma = nomeArma;
     }
-    public int getAtaque() {
+    public double getAtaque() {
         return ataque;
     }
-    public void setAtaque(int ataque) {
+    public void setAtaque(double ataque) {
         this.ataque = ataque;
     }
-    public int getDefesa() {
+    public double getDefesa() {
         return defesa;
     }
-    public void setDefesa(int defesa) {
+    public void setDefesa(double defesa) {
         this.defesa = defesa;
     }
 

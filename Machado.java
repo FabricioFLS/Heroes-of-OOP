@@ -1,4 +1,4 @@
-public class Machado extends Arma {
+public class Machado extends ArmaGuerreiro {
 
     public Machado() {
         super();
@@ -6,5 +6,6 @@ public class Machado extends Arma {
         setAtaque(17);
         setDefesa(8);
     }
+    
     
 }

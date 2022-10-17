@@ -1,4 +1,4 @@
-public class Varinha extends Arma {
+public class Varinha extends ArmaMago {
 
     public Varinha() {
         super();

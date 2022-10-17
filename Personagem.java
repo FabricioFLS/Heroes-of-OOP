@@ -3,36 +3,41 @@ import java.util.Scanner;
 public class Personagem {
     Scanner sc = new Scanner(System.in);                
     
-    private int ataque;
-    private int defesa;
-    private int vida;
+    private double ataque;
+    private double defesa;
+    private double vida;
     private String nomePersonagem;
     private Arma armaPersonagem;
+    private boolean posicaoRodada;
     
-    public int getAtaque() {
+    public boolean isPosicaoRodada() {
+        return posicaoRodada;
+    }
+    public void setPosicaoRodada(boolean posicaoRodada) {
+        this.posicaoRodada = posicaoRodada;
+    }
+    public double getAtaque() {
         return ataque;
     }
-    public void setAtaque(int ataque) {
+    public void setAtaque(double ataque) {
         this.ataque = ataque;
     }
-    public int getDefesa() {
+    public double getDefesa() {
         return defesa;
     }
-    public void setDefesa(int defesa) {
+    public void setDefesa(double defesa) {
         this.defesa = defesa;
     }
-    public int getVida() {
+    public double getVida() {
         return vida;
     }
-    public void setVida(int vida) {
+    public void setVida(double vida) {
         this.vida = vida;
     }
     public String getNomePersonagem() {
         return nomePersonagem;
     }
     public void setNomePersonagem(String nomePersonagem) {
-        System.out.println("Digite o nome do seu personagem");
-        nomePersonagem = sc.toString();
         this.nomePersonagem = nomePersonagem;        
     }
     
@@ -43,22 +48,16 @@ public class Personagem {
         this.armaPersonagem = armaPersonagem;
         ataque += armaPersonagem.getAtaque();
         defesa += armaPersonagem.getDefesa();
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        // TODO Auto-generated method stub
-        return super.equals(obj);
-    }
-    @Override
-    public String toString() {
-        // TODO Auto-generated method stub
-        return super.toString();
-    }
+    } 
     
-    public double dano;
-    public double receberAtaque(int ataque){
-        return vida -= (ataque - defesa);
-    }
+    public void atacar(Personagem atacante, Personagem atacado) {
+        double ataque = atacante.getAtaque() - atacado.getDefesa();
+        double vida = atacado.getVida() - ataque;
+        atacado.setVida(vida);
+        System.out.printf("\nO %s Causou %f de danos no %s\nVida do %s = %f\n",
+        atacante.getNomePersonagem(),ataque,atacado.getNomePersonagem(),atacado.getNomePersonagem(),atacado.getVida());
 
+    }
+   
+       
 }
